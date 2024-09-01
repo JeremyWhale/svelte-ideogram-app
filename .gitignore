@@ -1,4 +1,5 @@
 /node_modules/
 /public/build/
-serverconfig.mjs
+
 .DS_Store
+serverConfig.mjs
