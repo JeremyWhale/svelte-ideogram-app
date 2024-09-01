@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
+import { apiKey } from './serverConfig.mjs';
 
 const app = express();
 const port = 3000;
@@ -15,7 +16,7 @@ app.post('/generate', async (req, res) => {
     const response = await fetch("https://api.ideogram.ai/generate", {
       method: "POST",
       headers: {
-        "Api-Key": "YOUR API KEY HERE",
+        "Api-Key": apiKey,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(req.body),
