@@ -38,10 +38,9 @@ app.post('/generate', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Proxy server listening at http://localhost:${port}`);
+app.listen(3000, '0.0.0.0', () => {
+  console.log(`Proxy server listening at http://0.0.0.0:3000`);
 });
-
 // Add this line to catch any unhandled promise rejections
 process.on('unhandledRejection', (reason, promise) => {
   console.error('Unhandled Rejection at:', promise, 'reason:', reason);
